@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Passions+Conflict&family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 46px;
+    line-height: 46px;
+}
+.section1 .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    background: #f1e2e1;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.section1 .wrapper .i{
+    background: #ff7c5b;
+    color: white;
+    height: 18px;
+    width: 18px;
+    font-size: 12px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+.section1 .wrapper .text1{
+    color: black;
+    display: flex;
+    margin-left: 100px;
+}
+.section1 .wrapper .text2{
+    color: #ff7c5b;
+    margin-right: 100px;
+}
+.wrapper2{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    justify-content: space-evenly;
+}
+.wrapper2 .content{
+    display: flex;
+    flex-direction: column;
+}
+.wrapper2 .content .top{
+    display: flex;
+    flex-direction: row;
+}
+.wrapper2 .content .top .top-left{
+    min-height: 18px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    border-radius: 60px;
+    padding: 5px 20px;
+}
+/* .top{
+    justify-content: space-between;
+} */
+.top-left .search-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.top-left .search-bar input{
+    flex: 1;
+    border: 0;
+    outline: none;
+    /* padding: 14px 10px; */
+    font-size: 16px;
+}
+::placeholder{
+    color: gray;
+}
+.top-left .search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.top-left .search-bar button i{
+    color: #ff7c5b;
+    font-size: 20px;
+}
+.top-center{
+    justify-content: center;
+}
+.top-center .reg{
+    font-size: .8375rem;
+    color: #222;
+    font-weight: 600;
+    padding-top: 6px;
+}
+.top-center .reg #no{
+    font-size: 1rem;
+    color: #222;
+    font-weight: 700;
+    padding-top: 6px;
+}
+.top-center .reg span{
+    position: relative;
+    padding-left: 30px;
+}
+.top-center .reg i{
+    font-size: 25px;
+}
+.top-center .reg span .fa-viber{
+    color: #59267c;
+}
+.top-center .reg span .fa-whatsapp{
+    color: 	#128C7E;
+}
+.top-right{
+    padding: 3px;
+    margin-left: 20px;
+}
+.top-right button{
+    background: #0077bc;
+    border: #0077bc;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    width: max-content;
+}
+.bottom{
+    /* background:gray; */
+    height: fit-content;
+}
+.bottom .navbar ul{
+    list-style: none;
+}
+.bottom .navbar ul li{
+    position: relative;
+    float: left;  
+    padding: 0px 5px 0px 5px;
+}
+.bottom .navbar ul li a{
+    padding: 20px 10px 20px 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    cursor: pointer;
+}
+.bottom .navbar ul li a i{
+    display: inline-block;
+    margin-left: 3px;
+}
+.bgImage{
+    position: relative;
+    width: 100%;
+    /* height: max-content; */
+    height: 550px;
+    background-image: url("images/bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.bgImage::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.wrapper3 .content{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.wrapper3 .content h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 1 1000;
+    padding-bottom: 40px;
+}
+.wrapper3 .content .btnExp{
+    background: #0077bc;
+    border: #0077bc;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    padding: 15px 25px;
+    width: max-content;
+}
