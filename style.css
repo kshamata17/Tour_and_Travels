@@ -13,6 +13,31 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+.scroll_header{
+    background: gray;
+    position: fixed;
+    top: -60px;
+    display: block;
+    transition: top 0.5s;
+    width: 100%;
+    margin: auto;
+    z-index: 9999;
+}
+.scroll_menu{
+    margin: auto;
+    width: 700px;
+}
+.scroll_menu a{
+    float: left;
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+}
 .section1{
     display: flex;
     flex-direction: column;
@@ -65,6 +90,7 @@ body{
     flex-direction: row;
     margin: 30px;
     justify-content: space-evenly;
+    /* position: relative; */
 }
 .wrapper2 .content{
     display: flex;
@@ -145,6 +171,27 @@ body{
 .top-right{
     padding: 3px;
     margin-left: 20px;
+    position: relative;
+}
+.top-right.wrapper2.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0.5s;
 }
 .top-right button{
     background: #0077bc;

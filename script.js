@@ -19,30 +19,38 @@ document.querySelector(".fa-times").addEventListener
     document.querySelector(".pop_cont").style.display = "none";
 
 });
-// dropdown
-const button = document.getElementsByClassName(".btn");
-const list = document.getElementsByClassName(".list");
-list.style.display = "none";
 
-button.addEventListener("click", (event)=>{
-    if (list.style.display == "none"){
-        list.style.display = "block"
-    }
-    else{
-        list.style.display = "none"
-    }
-})
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-    document.getElementsByClassName("navbar").style.padding = "30px 10px";
-    // document.getElementById("logo").style.fontSize = "25px";
-  } else {
-    document.getElementsByClassName("navbar").style.padding = "80px 10px";
-    // document.getElementById("logo").style.fontSize = "35px";
-  }
-}
+
+// dropdown starts
+// const button = document.getElementsByClassName(".btn");
+// const list = document.getElementsByClassName(".list");
+// list.style.display = "none";
+
+// button.addEventListener("click", (event)=>{
+//     if (list.style.display == "none"){
+//         list.style.display = "block"
+//     }
+//     else{
+//         list.style.display = "none"
+//     }
+// })
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+//     document.getElementsByClassName("navbar").style.padding = "30px 10px";
+//     // document.getElementById("logo").style.fontSize = "25px";
+//   } else {
+//     document.getElementsByClassName("navbar").style.padding = "80px 10px";
+//     // document.getElementById("logo").style.fontSize = "35px";
+//   }
+// }
+//dropdown ends
+
+
+
+
 // var indexValue = 1;
 // showImg(indexValue);
 // function btn_slide(e){showImg(indexValue = e);}

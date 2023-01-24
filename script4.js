@@ -12,7 +12,7 @@ accordionContent.forEach((item,index )=> {
             item.querySelectorAll(".accordion_header button").classList.replace("fa-angle-down", "fa-angle-up");
         }else{
             // description.style.height = "0px";
-            description.style.background = "red";
+            description.style.background = "gray";
         }
         console.log(description);
     })

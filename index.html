@@ -12,6 +12,16 @@
     <title>Adventure Club Trek</title>
 </head>
 <body>
+    <!-- hidden navbar -->
+    <div class="scroll_header">
+        <div class="scroll_menu">
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+        </div>
+    </div>
+    <script src="script1.js"></script>
     <!-- 1st  -->
     <div class="section1">
         <div class="wrapper">
@@ -49,9 +59,15 @@
                    
                 </div>
                 <div class="top-right">
-                    <button>Let's Talk</button>
+                    <button onclick="toggle()" class="talk">Let's Talk</button>
+                </div>
+                <div id="popup">
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Possimus, eius?</p>
+                        <a href="#" onclick="toggle()">close</a>
                 </div>
             </div>
+            <script src="popup.js"></script>
             <div class="bottom">
                 <nav class="navbar">
                     <ul>

@@ -298,11 +298,30 @@ button:hover{
     line-height: 41px;
  
 }
-.package-page .container .image-cont .image-slider img{
+/* .package-page .container .image-cont .image-slider .images .image1{
+    background-image: url("images/everest-base-camp-helicopter-tour-1day.jpg");
+} */
+.package-page .container .image-cont .image-slider .images img{
     position: relative;
+    /* display: block; */
+   
 }
-.image-slider img .text{
+.image-slider .images .text{
     position: absolute;
+    /* content: ''; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* z-index: 1; */
+    color: #fff;
+    text-align: left;
+    padding: 15px 20px;
+    /* background-image: -webkit-gradient(linear,left bottom,left top,from(#000),to(transparent)); */
+    background-image: linear-gradient(to top,#000 0,transparent 100%);
+    font-weight: 600;
+    font-size: .8125rem;
+    text-transform: capitalize;
+    border-radius: 2px;
 }
 .package-page .container .content .row .col1 .facts{
     background: #f3fbff;
@@ -359,7 +378,7 @@ button:hover{
     margin-right: 18px;
 }
 .package-page .container .content .row .col1 .facts i{
-    color: #0077bc;
+    /* color: #0077bc; */
 }
 .package-page .container .content .row .col1 .facts .trip-text{
     padding: 5px;
@@ -452,7 +471,8 @@ button:hover{
     margin-top: 20px;
     position: relative;
 }
-.package-page .col1 .gallery .gallery_cont i{
+.package-page .col1 .gallery .gallery_cont #left,
+.package-page .col1 .gallery .gallery_cont #right{
     height: 50px;
     width: 50px;
     top: 50%;
@@ -466,12 +486,13 @@ button:hover{
     font-size: 25px;
     cursor: pointer;
     transform: translateY(-50%);
+    z-index: 999;
 }
-.package-page .col1 .gallery .gallery_cont i:first-child{
+.package-page .col1 .gallery .gallery_cont #left:first-child{
     left: -26px;
     /* display: none; */
 }
-.package-page .col1 .gallery .gallery_cont i:last-child{
+.package-page .col1 .gallery .gallery_cont #right:last-child{
     right: -4px;
 }
 .package-page .col1 .gallery .gallery_items{
@@ -483,9 +504,46 @@ button:hover{
     height: 160px;
     /* margin-top: 20px; */
     margin-right: 20px;
+    
+    display: block;
+    
+    /*  */
 }
 .package-page .col1 .gallery .gallery_image img{
     height: 100%;
+   
+    
+}
+.package-page .col1 .gallery .gallery_image{
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition:  0.4s ease-in-out;
+    background: black;
+    cursor: pointer;
+}
+.package-page .col1 .gallery .gallery_image{
+    position: relative;
+}
+.package-page .col1 .gallery .gallery_image:hover img{
+    filter: brightness(70%);
+    /* -webkit-filter: grayscale(80%); */
+    transition: filter 0.3s ease-in-out;
+}
+.package-page .col1 .gallery .gallery_image .overlay #search{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    display: none;
+}
+.package-page .col1 .gallery .gallery_image:hover .overlay #search{
+    opacity: 1;
+    display: block;
 }
 @media screen and (max-width: 900px){
     .package-page .col1 .gallery .gallery_image{
@@ -581,14 +639,71 @@ button:hover{
     color: #0077bc;
     padding-left: 20px;
 }
-.accordion .accordion_collapse{
+/* .accordion .accordion_collapse{
     transition: all .2s linear;
     height: 200px;
-}
+} */
 .itinerary-wrapper .itinerary .itinerary-note{
+    margin-top: 20px;
     padding: 20px 25px;
     box-shadow: 0 0 6px 0 rgb(0 0 0 / 20%);
     border-bottom-right-radius: 2px;
+}
+.package-page .itinerary-wrapper .faqs-cont{
+    margin-bottom: 20px;
+}
+.package-page .itinerary-wrapper  .faq{
+    /* max-width: 700px; */
+    margin-top:1rem;
+    padding-bottom: 1rem;
+    /* border: 1px solid #e5e5e5; */
+    padding: 10px;
+    cursor: pointer;
+    padding: 15px;
+}
+.package-page .itinerary-wrapper  .faq h4{
+    font-weight: 600;
+    font-size: 1rem;
+    color: #222;
+    cursor: pointer;
+    padding-right: 30px;
+    line-height: 24px;
+    position: relative;
+}
+.package-page .itinerary-wrapper  .faq h4::before{
+    position: absolute;
+    content: "\f111";
+    font-family: fontAwesome;
+    color: #f26f21;
+    left: -18px;
+}
+.package-page .itinerary-wrapper  .faq .question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.package-page .itinerary-wrapper  .faq .answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .9s ease;
+}
+.package-page .itinerary-wrapper  .faq .answer p{
+    padding-top: 1rem;
+}
+.package-page .itinerary-wrapper  .faq.active .answer{
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+.faq i{
+    color: #0077bc;
+    transition: transform 0.9s ease-in;
+    transform: translateY(-50%);
+}
+.faq.active i::before{
+    /* display: inline-block; */
+    content: '\f056';
+    font-family: fontAwesome;
+    /* transform: translateY(-50%); */
 }
 .package-page .price{
     margin: 10px;
@@ -832,6 +947,7 @@ table tbody tr .buttonDate button:hover{
     /* transform: translateY(-50%); */
 }
 
+
 @keyframes fade {
     from{
         opacity: 0;
@@ -1058,8 +1174,45 @@ margin: 30px;
     display: block;
     width: 100%;
 }
-.package-page .col2 .booking-module-content .booking-module form .row{
+.package-page .col2 .booking-module-content .booking-module form .calc{
     display: flex;
+    /* justify-content: space-between; */
+    /* background: gray; */
+    
+
+}
+.package-page .col2 .booking-module-content .booking-module form .calc .quantity{
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    padding: 2px;
+    border-radius: 2px;
+}
+.package-page .col2 .booking-module-content .booking-module form .calc .quantity button{
+    width: 33px;
+    height: 33px;
+    /* border: 1px solid black; */
+    color: black;
+    border-radius: 2px;
+    background: rgb(235, 235, 235);
+    border: none;
+}
+.package-page .col2 .booking-module-content .booking-module form .calc input{
+    /* background: gray; */
+    width: 50px;
+    border: none;
+    text-align: center;
+}
+.booking-module-content .booking-module form .calc .total-price{
+    text-align: center;
+    font-size: 20px;
+    /* align-items: center; */
+    margin-left: 10px;
+}
+.booking-module-content .booking-module form .calc .total-price .fa-dollar-sign{
+    display: inline-block;
+    font-size: 90%;
+    /* margin-right: 5px; */
 }
 .package-page .col2 .booking-module-content .booking-module form .booking-trip{
     width: 100%;
